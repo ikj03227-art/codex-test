@@ -1,0 +1,101 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #15213a;
+  background: #eef4ff;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(94, 160, 255, 0.32), transparent 34%),
+    radial-gradient(circle at 85% 85%, rgba(124, 86, 255, 0.22), transparent 38%),
+    #eef4ff;
+}
+
+.card {
+  width: min(100%, 390px);
+  padding: 40px 24px 32px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(48, 74, 128, 0.16);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #586a90;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 8vw, 2.25rem);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.counter {
+  margin: 32px 0 20px;
+  color: #63708b;
+  font-size: 0.95rem;
+}
+
+.counter strong {
+  display: block;
+  margin-top: 4px;
+  color: #3759c5;
+  font-size: 2.75rem;
+  line-height: 1.2;
+}
+
+button {
+  width: 100%;
+  min-height: 56px;
+  border: 0;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #4169e1, #6949d7);
+  box-shadow: 0 10px 24px rgba(70, 83, 194, 0.28);
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 6px 14px rgba(70, 83, 194, 0.24);
+}
+
+button:focus-visible {
+  outline: 3px solid #15213a;
+  outline-offset: 3px;
+}
+
+.note {
+  margin: 18px 0 0;
+  color: #7b8498;
+  font-size: 0.8rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+}
